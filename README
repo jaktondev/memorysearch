@@ -13,15 +13,12 @@ Componentes
 - scripts opcionales: utilidades para preparar datos locales (vectorstore Chroma) y pruebas de scraping.
 
 Instalación
-- Python 3.10+ y dependencias: langchain_openai, langchain_community, chromadb, bs4, requests. Instala con pip: pip install langchain-openai langchain-community chromadb beautifulsoup4 requests.
-- Configuración de clave: exporta tu API key del modelo en el entorno (OPENAI_API_KEY) o pásala en el JSON de entrada.[1]
+- Python 3.10+ y dependencias: pip install -r requirements.txt
+- Configuración de clave: exporta tu API key del modelo en el entorno (OPENAI_API_KEY) o pásala en el JSON de entrada.
+- Crear directorios vacios "ideas", "texts".
 
 Uso (terminal)
-- Entrada: un JSON por stdin con al menos la consulta y la API key. Ejemplo:
-  echo '{"prompt":"explica transformers con un ejemplo","api":"sk-..."}' | python main.py [1]  
-- Salida: un único JSON en stdout con el campo answer, por ejemplo:
-  {"answer":"...texto final..."}[1]
-- Logs: cualquier detalle de RAG/web/LLM aparece en stderr para depuración, sin contaminar la salida.
+- Entrada: Prompts de terminales con opcion de salida con "exit"
 
 Diseño
 - Separación de roles: planificar, buscar y juntar reduce alucinaciones y mejora cobertura.
