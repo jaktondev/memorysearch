@@ -276,6 +276,7 @@ def combine_answers(worker_results: dict, pregunta: str) -> dict:
 
 # Loop principal para interacción con el usuario
 ans = ""
+contexty = ""
 while ans != "exit":
     ans = Prompt.ask("\nIngresa tu pregunta ('exit' para salir)")
     if ans != "exit":
